@@ -73,6 +73,7 @@ class Header_Flex extends \Waboot\Component{
 			"navbar_content" => $vNavbar->get([
                 "nav_align" => Waboot\functions\get_option("headerflex_nav_align"),
                 "display_searchbar" => Waboot\functions\get_option("headerflex_nav_searchbar"),
+                "headerflex_mobile_menus" => Waboot\functions\get_option("headerflex_mobile_menus")
             ])
 		]);
 	}
@@ -119,6 +120,21 @@ class Header_Flex extends \Waboot\Component{
 					'right' => 'Right'
 				]
 			],"header");
+
+
+            $wpMenus = wp_get_nav_menus();
+            foreach ($wpMenus as $wpMenu) {
+                $mobileMenus[$wpMenu->term_id] = $wpMenu->name;
+            }
+            $orgzr->update('headerflex_mobile_menus',[
+                'name' => __( 'Menu to display on mobile', 'waboot' ),
+                'desc' => __( 'Select menu to display on mobile', 'waboot' ),
+                'id' => 'headerflex_mobile_menus',
+                'std' => '',
+                'type' => 'multicheck',
+                'options' => $mobileMenus
+            ],"header");
+
 
 			$orgzr->update("headerflex_nav_position", [
 				'name' => __( 'Navbar Position', 'waboot' ),
