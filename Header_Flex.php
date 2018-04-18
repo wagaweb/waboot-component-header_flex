@@ -4,7 +4,7 @@ Component Name: Header Flex
 Description: Header Flex Component
 Category: Layout
 Tags: Header, Flexbox
-Version: 1.0.0
+Version: 1.0.1
 Author: WAGA Team <dev@waga.it>
 Author URI: http://www.waga.it
 */
@@ -94,14 +94,14 @@ class Header_Flex extends \Waboot\Component{
 				'name' => __( 'Header Width', 'waboot' ),
 				'desc' => __( 'Select header width. Fluid or Boxed?', 'waboot' ),
 				'id' => 'headerflex_header_width',
-				'std' => 'container',
+				'std' => 'wbcontainer',
 				'type' => 'images',
 				'options' => [
-					'container-fluid' => [
+					'wbcontainer-fluid' => [
 						'label' => 'Fluid',
 						'value' => $imagepath . 'layout/header-fluid.png'
 					],
-					'container' => [
+					'wbcontainer' => [
 						'label' => 'Boxed',
 						'value' => $imagepath . 'layout/header-boxed.png'
 					]
@@ -165,14 +165,14 @@ class Header_Flex extends \Waboot\Component{
 				'name' => __( 'Navbar Width', 'waboot' ),
 				'desc' => __( 'Select navbar width. Fluid or Boxed?', 'waboot' ),
 				'id' => 'headerflex_nav_width',
-				'std' => 'container',
+				'std' => 'wbcontainer',
 				'type' => 'images',
 				'options' => array(
-					'container-fluid' => array (
+					'wbcontainer-fluid' => array (
 						'label' => 'Fluid',
 						'value' => $imagepath . 'layout/header-fluid.png'
 					),
-					'container' => array (
+					'wbcontainer' => array (
 						'label' => 'Boxed',
 						'value' => $imagepath . 'layout/header-boxed.png'
 					)

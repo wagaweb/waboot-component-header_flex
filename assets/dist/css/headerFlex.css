@@ -8,6 +8,17 @@
     margin: 0;
 }
 
+@media (max-width: 992px) {
+    .waboot-desktop-logo {
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+    .waboot-mobile-logo {
+        display: none;
+    }
+}
+
 @media (min-width: 992px) {
 
     .header__logo--left .header__logo {

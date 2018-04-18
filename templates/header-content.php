@@ -5,5 +5,9 @@
         <?php else : ?>
             <?php \Waboot\template_tags\site_title(); ?>
         <?php endif; ?>
+
+        <?php if ( \Waboot\template_tags\get_mobile_logo() != "" ) : ?>
+            <?php \Waboot\template_tags\mobile_logo() ?>
+        <?php  endif; ?>
     </a>
 </div>

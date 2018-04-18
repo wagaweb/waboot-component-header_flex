@@ -4,6 +4,7 @@
     $mobileMenus = $headerflex_mobile_menus;
     if (!empty($mobileMenus)) {
         foreach ($mobileMenus as $mobileMenuId=>$mobileMenuSelected) {
+            if($mobileMenuSelected === false){continue;}
             wp_nav_menu([
                 //'theme_location' => 'main',
                 'menu' => $mobileMenuId,
