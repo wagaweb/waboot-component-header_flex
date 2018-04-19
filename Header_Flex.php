@@ -63,9 +63,9 @@ class Header_Flex extends \Waboot\Component{
         $vNavbarToggler = new \WBF\components\mvc\HTMLView($this->theme_relative_path."/templates/navbar-toggler.php");
 
         $vWrapper->clean()->display([
-            "header_width" => Waboot\functions\get_option("headerflex_header_width"),
+            "header_width" => WabootLayout()->get_container_grid_class(\Waboot\functions\get_option( 'headerflex_header_width') ),
             "logo_position" => Waboot\functions\get_option("headerflex_logo_position"),
-            "navbar_width" => Waboot\functions\get_option("headerflex_nav_width"),
+            "navbar_width" => WabootLayout()->get_container_grid_class(\Waboot\functions\get_option( 'headerflex_nav_width') ),
             "navbar_position" => Waboot\functions\get_option("headerflex_nav_position"),
             "navbar_position_below" => Waboot\functions\get_option("headerflex_nav_position") == "below",
             "header_content" => $vHeader->get([]),
@@ -94,14 +94,14 @@ class Header_Flex extends \Waboot\Component{
 				'name' => __( 'Header Width', 'waboot' ),
 				'desc' => __( 'Select header width. Fluid or Boxed?', 'waboot' ),
 				'id' => 'headerflex_header_width',
-				'std' => 'wbcontainer',
+				'std' => \Waboot\Layout::GRID_CLASS_CONTAINER,
 				'type' => 'images',
 				'options' => [
-					'wbcontainer-fluid' => [
+                    \Waboot\Layout::GRID_CLASS_CONTAINER_FLUID => [
 						'label' => 'Fluid',
 						'value' => $imagepath . 'layout/header-fluid.png'
 					],
-					'wbcontainer' => [
+                    \Waboot\Layout::GRID_CLASS_CONTAINER => [
 						'label' => 'Boxed',
 						'value' => $imagepath . 'layout/header-boxed.png'
 					]
@@ -165,14 +165,14 @@ class Header_Flex extends \Waboot\Component{
 				'name' => __( 'Navbar Width', 'waboot' ),
 				'desc' => __( 'Select navbar width. Fluid or Boxed?', 'waboot' ),
 				'id' => 'headerflex_nav_width',
-				'std' => 'wbcontainer',
+				'std' => \Waboot\Layout::GRID_CLASS_CONTAINER,
 				'type' => 'images',
 				'options' => array(
-					'wbcontainer-fluid' => array (
+                    \Waboot\Layout::GRID_CLASS_CONTAINER_FLUID => array (
 						'label' => 'Fluid',
 						'value' => $imagepath . 'layout/header-fluid.png'
 					),
-					'wbcontainer' => array (
+                    \Waboot\Layout::GRID_CLASS_CONTAINER => array (
 						'label' => 'Boxed',
 						'value' => $imagepath . 'layout/header-boxed.png'
 					)
