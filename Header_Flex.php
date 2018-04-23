@@ -5,8 +5,8 @@ Description: Header Flex Component
 Category: Layout
 Tags: Header, Flexbox
 Version: 1.0.1
-Author: WAGA Team <dev@waga.it>
-Author URI: http://www.waga.it
+Author: Waboot Team <info@waboot.io>
+Author URI: http://www.waboot.io
 */
 
 if(!class_exists("\\Waboot\\Component")){
