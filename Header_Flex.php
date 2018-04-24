@@ -4,7 +4,7 @@ Component Name: Header Flex
 Description: Header Flex Component
 Category: Layout
 Tags: Header, Flexbox
-Version: 1.0.1
+Version: 1.0.2
 Author: Waboot Team <info@waboot.io>
 Author URI: http://www.waboot.io
 */
