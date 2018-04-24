@@ -192,4 +192,16 @@
 }
 
 
+@media (max-width: 991px) {
+    .main-navigation ul.navbar-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-navigation ul.navbar-mobile {
+        display: none;
+    }
+}
+
 /* End Navbar */

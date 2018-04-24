@@ -1,5 +1,12 @@
 <nav class="main-navigation nav-<?php echo $nav_align; ?>" role="navigation">
 
+    <?php wp_nav_menu([
+        'theme_location' => 'main',
+        'depth' => 0,
+        'container' => false,
+        'menu_class' => apply_filters('waboot/navigation/main/class', 'nav navbar-nav navbar-desktop')
+    ]); ?>
+
     <?php
     $mobileMenus = $headerflex_mobile_menus;
     if (!empty($mobileMenus)) {
@@ -10,7 +17,7 @@
                 'menu' => $mobileMenuId,
                 'depth' => 0,
                 'container' => false,
-                'menu_class' => apply_filters('waboot/navigation/main/class', 'nav navbar-nav')
+                'menu_class' => apply_filters('waboot/navigation/main/class', 'nav navbar-nav navbar-mobile')
             ]);
         }
     } ?>
