@@ -108,9 +108,9 @@
     }
     .navbar-toggle {
         float: none;
-        /*order: 5;*/
         padding: 0;
         margin: 0;
+        border: 0;
     }
     .navbar-toggle .icon-bar {
         display: block;
