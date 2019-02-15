@@ -4,7 +4,7 @@ Component Name: Header Flex
 Description: Header Flex Component
 Category: Layout
 Tags: Header, Flexbox
-Version: 1.1.0
+Version: 1.2.0
 Author: Waboot Team <info@waboot.io>
 Author URI: http://www.waboot.io
 */
@@ -20,13 +20,12 @@ class Header_Flex extends \Waboot\Component{
 	public function setup(){
 		parent::setup();
         //add_filter("waboot/navigation/main/class",[$this,"set_main_navigation_classes"]);
+		Waboot()->add_component_style('header_flex_style', $this->directory_uri . '/assets/dist/css/headerFlex.css');
     }
 
     public function styles(){
         parent::styles();
         wp_enqueue_style('dashicons');
-        Waboot()->add_inline_style('header_flex_style', $this->directory_uri . '/assets/dist/css/headerFlex.css');
-
     }
 
     public function scripts() {
